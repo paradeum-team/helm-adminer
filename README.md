@@ -17,7 +17,7 @@ This [Helm](https://github.com/kubernetes/helm) chart installs [Adminer](https:/
 ### Add Helm repository
 
 ```bash
-helm repo add cetic https://cetic.github.io/helm-charts
+helm repo add paradeum https://paradeum-team.github.io/helm-charts
 helm repo update
 ```
 
@@ -37,7 +37,7 @@ The following items can be set via `--set` flag during installation or configure
 Install the Adminer helm chart with a release name `my-release`:
 
 ```bash
-helm upgrade --install my-release cetic/adminer
+helm upgrade --install my-release paradeum/adminer
 ```
 
 ## Uninstallation
