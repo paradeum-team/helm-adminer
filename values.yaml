@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: adminer
-  tag: 4.8.1-standalone
+  repository: dockette/adminer
+  tag: latest
   pullPolicy: IfNotPresent
   pullSecrets: []
 
