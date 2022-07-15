@@ -54,40 +54,40 @@ The following table lists the configurable parameters of the Adminer chart and t
 
 | Parameter                         | Description                                                             | Default                     |
 | --------------------------------- | ----------------------------------------------------------------------- | --------------------------- |
-| **Image**                                                                                                                                 |
-| `image.repository`                | Image                                                                   | `adminer`                   |
-| `image.tag`                       | Image tag                                                               | `4.7.7-standalone`          |
+| **Image**                                                                                                                                 |||
+| `image.repository`                | Image                                                                   | `dockette/adminer`   |
+| `image.tag`                       | Image tag                                                               | `latest` |
 | `image.pullPolicy`                | Image pull policy                                                       | `IfNotPresent`              |
 | `image.pullSecrets`               | Image pull secrets for private registry                                 | `[]`              |
-| **Config**                                                                                                                                |
+| **Config**                                                                                                                                |||
 | `config.plugins`                  | List of plugins to install. You can find the list of plugins on [GitHub](https://github.com/vrana/adminer/tree/master/plugins)| ``|
 | `config.design`                   | A bundled design to use. You can find the list of designs on [GitHub](https://github.com/vrana/adminer/tree/master/designs)| ``|
 | `config.externalserver`           | The default host                                                        | ``                          |
-| **Service**                                                                                                                               |
-| `service.type`                    | Service type                                                            | `NodePort`                  |
+| **Service**                                                                                                                               |||
+| `service.type`                    | Service type                                                            | `ClusterIP`          |
 | `service.port`                    | The service port                                                        | `80`                        |
 | `service.nodePort`                | The nodePort port                                                       | `nil`                        |
 | `service.annotations`             | Custom annotations for service                                          | `{}`                        |
 | `service.labels`                  | Additional custom labels for the service                                | `{}`                        |
 | `service.loadBalancerIP`          | LoadBalancerIP if service type is `LoadBalancer`                        | `nil`                       |
 | `service.loadBalancerSourceRanges`| Address that are allowed when svc is `LoadBalancer`                     | `[]`                        |
-| **Ingress**                                                                                                                               |
+| **Ingress**                                                                                                                               |||
 | `ingress.enabled`                 | Enables Ingress                                                         | `false`                     |
+| `ingress.className` | ingress className | "" |
 | `ingress.annotations`             | Ingress annotations                                                     | `{}`                        |
-| `ingress.labels`                  | Custom labels                                                           | `{}`                        |
-| `ingress.hosts`                   | Ingress accepted hostnames                                              | `[]`                        |
+| `ingress.hosts`                   | Ingress accepted hostnames                                              | `[{"host":"chart-example.local","paths":[{"path":"/","pathType":"ImplementationSpecific"}]}]` |
 | `ingress.tls`                     | Ingress TLS configuration                                               | `[]`                        |
-| **Resources**                                                                                                                             |
+| **Resources**                                                                                                                             |||
 | `resources`                       | CPU/Memory resource requests/limits                                     | `{}`                        |
-| **Tolerations**                                                                                                                           |
+| **Tolerations**                                                                                                                           |||
 | `tolerations`                     | Add tolerations                                                         | `[]`                        |
-| **NodeSelector**                                                                                                                          |
+| **NodeSelector**                                                                                                                          |||
 | `nodeSelector`                    | node labels for pod assignment                                          | `{}`                        |
-| **Affinity**                                                                                                                              |
+| **Affinity**                                                                                                                              |||
 | `affinity`                        | node/pod affinities                                                     | `{}`                        |
-| **LivenessProbe**                                                                                                                         |
+| **LivenessProbe**                                                                                                                         |||
 | `livenessProbe`                   | Liveness probe settings                                                 | `nil`                       |
-| **ReadnessProbe**                                                                                                                         |
+| **ReadnessProbe**                                                                                                                         |||
 | `readinessProbe`                  | Readiness probe settings                                                | `nil`                       |
 | `volumeMounts`                    | Add volumeMount to the adminer container                                | `nil`                       |
 | `volumes`                         | Add volumes to the pod                                                  | `nil`                       |
