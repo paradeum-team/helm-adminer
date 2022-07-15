@@ -16,7 +16,7 @@ keywords:
   - database
   - sql
 source:
-  - https://github.com/cetic/helm-adminer
+  - https://github.com/paradeum-team/helm-adminer
 maintainers:
   - name: fzalila
     email: faiez.zalila@cetic.be
@@ -24,3 +24,20 @@ maintainers:
   - name: alexnuttinck
     email: alexandre.nuttinck@cetic.be
     url: https://github.com/alexnuttinck
+  - name: liujinye
+    email: 75710541@qq.com
+    url: https://github.com/ss75710541
+
+annotations:
+  artifacthub.io/changes: |
+    - Dfdaemon adds defaultTag configuration.
+  artifacthub.io/links: |
+    - name: Chart Source
+      url: https://github.com/paradeum-team/helm-adminer
+    - name: Source
+      url: https://github.com/vrana/adminer
+    - name: Dockerfile Source
+      url: https://github.com/dockette/adminer
+  artifacthub.io/images: |
+    - name: adminer
+      image: dockette/adminer:latest
