@@ -94,7 +94,7 @@ The following table lists the configurable parameters of the Adminer chart and t
 
 ## Credits
 
-Initially inspired from https://github.com/mogaal/helm-charts/tree/master/adminer.
+Initially inspired from https://github.com/mogaal/helm-charts/tree/master/adminer、https://github.com/cetic/helm-adminer
 
 ## Contributing
 
